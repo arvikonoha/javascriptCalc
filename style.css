@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.calc-container {
+  display: flex;
+  align-items: center;
+  height: 700px;
+  justify-content: center;
+  background: linear-gradient(#d9ff00e1, #eeff00);
+}
+
+.calc-inner {
+  display: grid;
+  width: 600px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 20px;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.description {
+  grid-column: 1/6;
+}
+
+.calc-inner .clear-btn {
+  grid-column: 1/2;
+}
+
+.calc-inner .calc-display {
+  grid-column: 2/6;
+  text-align: right;
+}
+
+.calc-inner .calc-btn,
+.calc-inner .calc-display,
+.calc-inner .clear-btn {
+  padding: 30px;
+  background-color: #3112009d;
+  border-radius: 2px;
+}
+
+.calc-inner .calc-display {
+  background-color: #312c0057;
+  color: #060635;
+}
+
+.calc-inner .calc-btn,
+.calc-inner .clear-btn {
+  cursor: pointer;
+  transition: .2s all ease-in-out;
+}
+
+.calc-inner .calc-btn:active,
+.calc-inner .clear-btn:active {
+  transform: scale(.9);
+  transition: .2s all ease-in-out;
+}
